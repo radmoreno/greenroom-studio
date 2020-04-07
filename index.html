@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Home | Green Room Studio</title>
+	<link rel="icon" type="image/ico" href="img/icogreen.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Oswald|Roboto+Condensed:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<div class="mobile-nav fixed-top">
+			<div class="device">
+				<div class="container">
+					<div class="header-mobile">
+						<a href="index.html"><img src="img/logo.png" height="60" alt="green-room logo"></a>
+					</div>
+					<button id="burger" class="open-main-nav">
+						<span class="burger"></span>
+						<span class="burger-text">Menu</span>
+					</button>
+					<nav class="mobile" id="mobile">
+						<ul>
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="portfolio.html">Portfolio</a>
+							</li>
+							<li>
+								<a href="team.html">Team</a>
+							</li>
+							<li>
+								<a href="gallery.html">Gallery</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	</div>
+	<nav class="nav-gradient"></nav>
+	<nav class="main-nav">
+			<div class="logo"><a href="index.html"><img src="img/logo.png" alt="green room studio logo"></a></div>
+			<div class="portfolio"><a href="portfolio.html">Portfolio</a></div>
+			<div class="theteam"><a href="team.html">The Team</a></div>
+			<div class="team"><a href="team.html">Team</a></div>
+			<div class="gallery"><a href="gallery.html">Gallery</a></div>
+			<div class="social-header">
+				<a href="https://www.facebook.com/greenroomromania/" target="_blank" class="hd-facebook"><img src="img/facebook.png" width="23" height="23" alt="green room studio facebook"></a>
+				<a href="https://www.instagram.com/green.room.music/" target="_blank" class="hd-instagram"><img src="img/instagram.png" width="23" height="23" alt="green room studio instagram"></a>
+				<a href="https://www.facebook.com/greenroomromania/" target="_blank" class="hd-youtube"><img src="img/youtube.png" width="23" height="23" alt="green room studio youtube"></a>
+			</div>
+			<div class="contact"><a href="#contact">Contact</a></div>
+	</nav>
+	<section class="section1" style="text-align: center">
+		<div class="title">
+			<h1>where music is at home</h1>
+			<h4>welcome to the cosiest studio in Transylvania</h4>
+		</div>
+	</section>
+	<section class="section2">
+		<h1>who we are</h1>
+		<article>
+			<img src="img/mihail.png" alt="mihail green room studio">
+			<p><strong>Green Room Studios</strong> is a music production studio and 
+			record label based in the city of Cluj-Napoca, Romania.<br><br>
+
+			Songs created here have topped <strong>national and international</strong>
+			charts and have won numerous awards. From songs that
+			reached platinum status such as “Who You Are” to pop,
+			electronic, indie or trap, our music is our pride. </p>
+		</article>
+	</section>
+	<footer id="contact" class="footer">
+		<p>Find us at:</p>
+		<div class="social-footer">
+			<a href="https://www.facebook.com/greenroomromania/" target="_blank" class="ft-facebook"><img src="img/facebook.png" width="23" height="23" alt="green room studio facebook"></a>
+			<a href="https://www.instagram.com/green.room.music/" target="_blank" class="ft-instagram"><img src="img/instagram.png" width="23" height="23" alt="green room studio instagram"></a>
+			<a href="https://www.facebook.com/greenroomromania/" target="_blank" class="ft-youtube"><img src="img/youtube.png" width="23" height="23" alt="green room studio youtube"></a></div>
+		<p>Or e-mail us: office@greenroomstudio.co</p>
+		<p>Copyright © 2020</p>	
+	</footer>
+	<script>
+		let burger = document.getElementById('burger'),
+	 nav    = document.getElementById('mobile'),
+	 slowmo = document.getElementById('slowmo');
+
+		burger.addEventListener('click', function(e){
+			this.classList.toggle('is-open');
+			nav.classList.toggle('is-open');
+		});
+
+		slowmo.addEventListener('click', function(e){
+			this.classList.toggle('is-slowmo');
+		});
+
+		/* Onload demo - dirty timeout */
+		let clickEvent = new Event('click');
+
+		window.addEventListener('load', function(e) {
+			slowmo.dispatchEvent(clickEvent);
+			burger.dispatchEvent(clickEvent);
+			
+			setTimeout(function(){
+				burger.dispatchEvent(clickEvent);
+				
+				setTimeout(function(){
+					slowmo.dispatchEvent(clickEvent);
+				}, 3500);
+			}, 5500);
+		});
+			</script>
+			<script>
+				document.querySelector('.nav').onclick = function (e) {
+		  var nav = document.querySelector('.title');
+		  nav.classList.toggle('show');
+		  e.preventDefault();
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

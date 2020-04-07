@@ -1,0 +1,588 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+  overflow-x: hidden;
+}
+html {
+	scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "ShreeDev0714";
+  src: url('ShreeDevRegular.ttf') format('truetype');
+  font-weight: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Oswald|Roboto+Condensed:300&display=swap');
+
+/*====================
+		HERO
+=====================*/
+
+.section1 {
+	background-image: url(img/bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	/*background-attachment: fixed;*/
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: 'Oswald';
+	color: white;
+
+}
+.title h4 {
+	font-family: 'ShreeDev0714';
+	font-size: 1.2rem;
+}
+.title h1 {
+	font-size: 3rem;
+	background-color: black;
+	padding: 0 10px 5px 10px;
+}
+
+/*=========================
+		SECTION 2
+===========================*/
+
+.section2 {
+	background-color: black;
+	background-image: url(patterns/binding_dark.png);
+
+}
+.section2 h1 {
+	text-align: center;
+	padding-top: 40px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;	
+	color: white;
+}
+.section2 article {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	padding: 60px 30px 200px 30px;
+	grid-gap: 30px;
+}
+article img {
+	padding: 20px 0px;
+	padding-right: 10px;
+	max-width: 90%;
+	min-width: 390px;
+	/*padding-left: 2vw;*/
+	max-height: 320px;
+	justify-self: end;
+}
+article p {
+	font-family: 'Bellota Text';
+	font-family: 'ShreeDev0714';
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	margin-right:20px;
+	text-align: justify;
+	text-justify: inter-word;
+	max-height: 200px;
+	max-width: 570px;
+}
+/*=========================
+		NAVBAR MOBILE
+===========================*/
+  /* Main menu positionning */
+.header-mobile {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: black;
+}
+.header-mobile a img {
+  padding: 5px 0px;
+}
+.mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+}
+
+.mobile.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
+/* Yellow band effect */
+.mobile::before {
+   content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #242424;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
+}
+
+.mobile.is-open::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.mobile ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+}
+
+.mobile li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.mobile a {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mobile li:nth-child(1) a {
+  transition: all 275ms 175ms
+}
+.mobile li:nth-child(2) a {
+  transition: all 275ms 225ms
+}
+.mobile li:nth-child(3) a {
+  transition: all 275ms 275ms
+}
+.mobile li:nth-child(4) a {
+  transition: all 275ms 325ms
+}
+.mobile li:nth-child(5) a {
+  transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.mobile ul,
+.mobile li {
+  list-style: none;
+  padding: 0;
+}
+.mobile a {
+  display: block;
+  padding: 12px 0;
+  color: white;
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "lato";
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+.open-main-nav {
+  position: fixed;
+  top: 15px;
+  padding-top: 20px;
+  right: 15px;
+  z-index: 1000;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.open-main-nav:focus {
+  outline: none;
+}
+.burger {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 0 auto;
+  background: white;
+  transform: skew(5deg);
+  transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: white;
+  transition: all .275s;
+}
+
+.burger:after {
+  transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+  transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+  transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+  transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+  transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/*MENU Text part*/
+
+.burger-text {
+  display: none;
+  font-size: .675rem;
+  letter-spacing: .05em;
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  color: #5A3B5D;
+}
+.device {
+  display: none;
+}
+/*====================
+	NAVBAR DESKTOP
+======================*/
+.nav-gradient {
+	width: 100%;
+	height: 200px;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: rgb(2,0,36);
+background: -moz-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1);
+}
+.main-nav {
+	width: 100%;
+	height: 60px;
+	background-color: rgba(255,255,255,0.0);
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.main-nav div a {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: capitalize;
+	color: white;
+}
+
+.main-nav div {
+	background-color: none;
+	text-align: center;
+}
+/*==logo and transitions===*/
+.logo {
+	padding: 0 0 0 20px;
+}
+.logo img {
+	object-fit: contain;
+	height: 60px;
+	padding: 3px 0px 0px 5px;
+	object-position: center center;
+	opacity: 0.7;
+	transition: opacity 200ms ease-in-out;
+}
+.logo img:hover {
+	opacity: 1;
+}
+.portfolio {
+	grid-column: 5;
+	transform: scale(1.0);
+	transition: transform 150ms linear;
+}
+.theteam {
+/*	white-space: nowrap;
+*/	grid-column: 6;
+transform: scale(1.0);
+	transition: transform 150ms linear;
+}
+.team {
+	display: none;
+	transform: scale(1.0);
+	transition: transform 150ms linear;
+}
+.gallery {
+	grid-column: 7;
+	transform: scale(1.0);
+	transition: transform 150ms linear;
+}
+.portfolio:hover {
+	transform: scale(1.1);
+}
+.theteam:hover {
+	transform: scale(1.1);
+}
+.team:hover {
+	transform: scale(1.1);
+}
+.gallery:hover {
+	transform: scale(1.1);
+}
+/*=====social icons======*/
+.social-header {
+	grid-column: 10;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-evenly;
+	filter: invert(100%);
+}
+.social-header a {
+	padding: 0 10px;
+
+}
+.hd-facebook {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.hd-instagram {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.hd-youtube {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.hd-facebook:hover {
+	opacity: 1;
+}
+.hd-instagram:hover {
+	opacity: 1;
+}
+.hd-youtube:hover {
+	opacity: 1;
+}
+/*======contact button======*/
+.contact {
+	grid-column: 11;
+	background-color: rgba(255,255,255,0.1);
+	border: 2px solid white;
+	border-radius: 5px;
+	margin: 0 20px;
+	transition: background-color 200ms ease-in-out,
+				color 200ms ease-in-out;
+}
+.contact:hover {
+	background-color: rgba(255,255,255,1);
+}
+.contact a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	transition: color 200ms ease-in-out;
+	padding: 7px;
+}
+.contact a:hover {
+	color: black;
+}
+/*======================
+		FOOTER: 
+========================*/
+
+.footer {  /*general settings of footer*/
+	height: 200px;
+	background-color: #999999;
+	background-image: url(patterns/mochaGrunge.png);
+	/*clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%);*/
+	margin-top: -45px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer p {     /*paragraph settings */
+	padding: 15px;
+	margin: 0px;
+	font-family: 'ShreeDev0714',sans-serif;
+	font-size: 14px;
+	transition: opacity 200ms ease-in-out;
+}
+.footer p:last-child {   /*copyright @2020 settings*/
+	opacity: 0.4;
+	padding: 0;
+}
+.footer p:first-child {
+	padding-bottom: 3px;
+}
+.social-footer {     /*social media pagination*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	padding: 5px 0px;
+	/*border-top: 1px solid #595959;
+	border-bottom: 1px solid #595959;*/
+}
+/*====hover transitions for social images====*/
+.ft-facebook {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.ft-instagram {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.ft-youtube {
+	opacity: 0.5;
+	transition: opacity 200ms ease-in-out;
+}
+.ft-facebook:hover {
+	opacity: 1;
+}
+.ft-instagram:hover {
+	opacity: 1;
+
+}
+.ft-youtube:hover {
+	opacity: 1;
+}
+/*==============*/
+
+/*RESPONSIVE QUERIES
+/*MAXIMUM WIDTH SCREEN*/
+/*@media only screen and (min-width: 1100px)
+{
+	.section2 article img {
+		padding-left: 100px;
+	}
+}*/
+
+/*TABLET SIZE SCREEN*/
+@media only screen and (max-width: 1200px) /*de-aici se modifica team si padding la socialu de sus*/ {
+	.main-nav {
+		height: 56px;
+	}
+	.team {
+		display: block;
+	}
+	.theteam {
+		display: none;
+	}
+	.section2 article p {
+		font-size: 17px;
+	}
+  .social-header a {
+    padding: 0 6px;
+  }
+}
+/*MOBILE WIDTH*/
+@media only screen and (max-width: 950px) {
+	.nav-gradient {
+    display: none;
+  }
+  .main-nav {
+		display: none;
+	}
+	.device {
+		display: block;
+	}
+	.section2 {
+		height: auto;
+	}
+	.section2 article {
+	display: grid;
+	grid-template-columns: minmax(0,1fr);
+	justify-content: center;
+	align-items: center;
+	}
+	.section2 article img {
+	margin: auto;
+	margin-top: -50px;
+  min-width: 0;
+	max-width: 500px;
+	width: 99%;
+  object-fit: contain;
+	padding-left:0;
+  padding-right:0;
+	}
+	.section2 article p {
+		margin-top:-20px;
+		margin: auto;
+		padding: 0;
+		padding-top: 20px;
+		max-width: 500px;
+		height:auto;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
