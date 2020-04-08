@@ -457,7 +457,10 @@ transform: scale(1.0);
  /*video modal centering*/
 
  #modal1, #modal4, #modal6 {
- 	margin-top: 75px;
+ 	margin-top: 20vh;
+ 	/*display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;*/
  }
 
 
