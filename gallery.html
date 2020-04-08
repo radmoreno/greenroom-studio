@@ -74,8 +74,8 @@
 	</nav>
 	<div class="container-fluid">
 		<div class="row">
-		    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-lg-3 col-sm-6 col-xs-12 col-fluid">
-		    	<img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+		    <a href="gallery/1.png" data-toggle="lightbox" data-gallery="gallery" class="col-lg-3 col-sm-6 col-xs-12 col-fluid">
+		    	<img src="gallery/1crop.png" class="img-fluid rounded">
 		    </a>
 		    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-lg-3 col-sm-6 col-xs-12">
 		    	<img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
@@ -129,54 +129,55 @@
 		<p>Or e-mail us: office@greenroomstudio.co</p>
 		<p>Copyright © 2020</p>	
 	</footer>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script>
-		let burger = document.getElementById('burger'),
-	 nav    = document.getElementById('mobile'),
-	 slowmo = document.getElementById('slowmo');
+	<!-- scripts  -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script>
+			let burger = document.getElementById('burger'),
+		 nav    = document.getElementById('mobile'),
+		 slowmo = document.getElementById('slowmo');
 
-		burger.addEventListener('click', function(e){
-			this.classList.toggle('is-open');
-			nav.classList.toggle('is-open');
-		});
+			burger.addEventListener('click', function(e){
+				this.classList.toggle('is-open');
+				nav.classList.toggle('is-open');
+			});
 
-		slowmo.addEventListener('click', function(e){
-			this.classList.toggle('is-slowmo');
-		});
+			slowmo.addEventListener('click', function(e){
+				this.classList.toggle('is-slowmo');
+			});
 
-		/* Onload demo - dirty timeout */
-		let clickEvent = new Event('click');
+			/* Onload demo - dirty timeout */
+			let clickEvent = new Event('click');
 
-		window.addEventListener('load', function(e) {
-			slowmo.dispatchEvent(clickEvent);
-			burger.dispatchEvent(clickEvent);
-			
-			setTimeout(function(){
+			window.addEventListener('load', function(e) {
+				slowmo.dispatchEvent(clickEvent);
 				burger.dispatchEvent(clickEvent);
 				
 				setTimeout(function(){
-					slowmo.dispatchEvent(clickEvent);
-				}, 3500);
-			}, 5500);
-		});
-	</script>
-	<script>
-				document.querySelector('.nav').onclick = function (e) {
-		  var nav = document.querySelector('.title');
-		  nav.classList.toggle('show');
-		  e.preventDefault();
-		}
-	</script>
-	<script>$(document).on("click", '[data-toggle="lightbox"]', function(event) {
-  event.preventDefault();
-  $(this).ekkoLightbox();
-});
-	</script>
-	
+					burger.dispatchEvent(clickEvent);
+					
+					setTimeout(function(){
+						slowmo.dispatchEvent(clickEvent);
+					}, 3500);
+				}, 5500);
+			});
+		</script>
+		<script>
+					document.querySelector('.nav').onclick = function (e) {
+			  var nav = document.querySelector('.title');
+			  nav.classList.toggle('show');
+			  e.preventDefault();
+			}
+		</script>
+		<script>$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+	  event.preventDefault();
+	  $(this).ekkoLightbox();
+	});
+		</script>
+		
 </body>
 </html>
