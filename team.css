@@ -232,6 +232,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 16px 10px 0px;
 }
 .main-nav div a {
 	font-family: 'Lato', sans-serif;
