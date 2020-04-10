@@ -10,6 +10,11 @@ html {
 	scroll-behavior: smooth;
   overflow-x: hidden;
 }
+h3, h4 {
+	font-family: "Montserrat", "Helvetica", Arial, sans-serif !important;
+	font-weight: 300 !important;
+	font-size: 1.8em;
+}
 @font-face {
   font-family: "ShreeDev0714";
   src: url('ShreeDevRegular.ttf') format('truetype');
@@ -463,6 +468,7 @@ transform: scale(1.0);
  	flex-direction: column;
  	justify-content: center;*/
  }
+
 
 
 
