@@ -421,6 +421,9 @@ transform: scale(1.0);
 	color: white;
 	opacity: 0.9;
 }
+.card-footer {
+	padding-top: 0px !important;
+}
 /*========================================
 				
 				FOOTER: 
@@ -429,8 +432,9 @@ transform: scale(1.0);
 
 .footer {  /*general settings of footer*/
 	height: 200px;
-	background-color: #999999;
-	background-image: url(patterns/mochaGrunge.png);
+	background-color: #999999 !important;
+	color: #474747;
+	/*background-image: url(patterns/mochaGrunge.png);*/
 	/*clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%);*/
 	/*margin-top: -45px;*/
 	display: flex;
