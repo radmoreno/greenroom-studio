@@ -433,7 +433,7 @@ transform: scale(1.0);
 .footer {  /*general settings of footer*/
 	height: 200px;
 	background-color: #999999;
-	background-image: url(patterns/mochaGrunge.png);
+	/*background-image: url(patterns/mochaGrunge.png);*/
 	/*clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%);*/
 	margin-top: -45px;
 	display: flex;
@@ -442,6 +442,7 @@ transform: scale(1.0);
 	align-items: center;
 }
 .footer p {     /*paragraph settings */
+	color: #474747;
 	padding: 15px;
 	margin: 0px;
 	font-family: 'ShreeDev0714',sans-serif;
