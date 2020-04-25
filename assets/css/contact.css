@@ -10,7 +10,7 @@ html {
 }
 @font-face {
   font-family: "ShreeDev0714";
-  src: url('ShreeDevRegular.ttf') format('truetype');
+  src: url('../fonts/ShreeDevRegular.ttf') format('truetype');
   font-weight: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
@@ -128,7 +128,7 @@ html {
   display: block;
   padding: 12px 0;
   color: white;
-  font-size: 1.4em;
+  font-size: 22.4px;
   text-decoration: none;
   font-weight: bold;
   font-family: "lato";
@@ -418,7 +418,7 @@ transform: scale(1.0);
 .address h4::before {
 	content: "";
     display: block;
-    background: url(icons/thumbtack-solid.svg) /*no-repeat top right*/;
+    background: url(../icons/thumbtack-solid.svg) /*no-repeat top right*/;
     background-repeat: no-repeat;
     filter: invert(1);
     width: 20px;
@@ -431,7 +431,7 @@ transform: scale(1.0);
 .phone h4::before {
 	content: "";
     display: block;
-    background: url(icons/phone-solid.svg) /*no-repeat top right*/;
+    background: url(../icons/phone-solid.svg) /*no-repeat top right*/;
     background-repeat: no-repeat;
     filter: invert(1);
     width: 20px;
@@ -444,7 +444,7 @@ transform: scale(1.0);
 .e-mail h4::before {
 	content: "";
     display: block;
-    background: url(icons/envelope-regular.svg) /*no-repeat top right*/;
+    background: url(../icons/envelope-regular.svg) /*no-repeat top right*/;
     background-repeat: no-repeat;
     filter: invert(1);
     width: 20px;
