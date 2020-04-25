@@ -10,7 +10,7 @@ html {
 }
 @font-face {
   font-family: "ShreeDev0714";
-  src: url('ShreeDevRegular.ttf') format('truetype');
+  src: url('../fonts/ShreeDevRegular.ttf') format('truetype');
   font-weight: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
@@ -54,7 +54,7 @@ html {
 
 .section2 {
 	background-color: black;
-	background-image: url(patterns/binding_dark.png);
+	background-image: url(../../patterns/binding_dark.png);
 
 }
 .section2 h1 {

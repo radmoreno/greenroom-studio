@@ -17,7 +17,7 @@ h3, h4 {
 }
 @font-face {
   font-family: "ShreeDev0714";
-  src: url('ShreeDevRegular.ttf') format('truetype');
+  src: url('../fonts/ShreeDevRegular.ttf') format('truetype');
   font-weight: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
