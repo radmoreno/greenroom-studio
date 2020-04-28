@@ -21,7 +21,7 @@ html {
 =====================*/
 
 .section1 {
-	background-image: url(../img/bg2.jpg);
+	background-image: url(../img/bg3.jpg);
 	background-size: cover;
 	background-position: bottom;
 	background-attachment: fixed;
@@ -41,12 +41,16 @@ html {
 	font-family: 'ShreeDev0714', 'Helvetica', Arial, Sans-serif;
 	font-size: 1.3rem;
 	font-weight: lighter;
+	animation-delay: 1800ms;
 }
 .title h1 {
 	font-size: 3rem;
 	/*background-color: #0b1011;*/
 	padding: 0 10px 5px 10px;
+	/*animation-duration: 3s;*/
+  	animation-delay: 400ms;
 }
+
 
 /*=========================
 		SECTION 2
