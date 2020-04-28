@@ -38,7 +38,7 @@ h3, h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: black;
+  background: #0b1011;
 }
 .header-mobile a img {
   padding: 5px 0px;
@@ -71,7 +71,7 @@ h3, h4 {
     bottom: 0;
     left: 0;
     right: -15px;
-    background: #242424;
+    background: #0b1011;
     transform-origin: 0 0;
     transform: skew(-14deg) translateX(-120%);
     transition: all .275s .1s;
@@ -377,7 +377,7 @@ transform: scale(1.0);
 	font-family: 'Oswald', sans-serif;
 }
 .card-body {
-	background-color: black;
+	background-color: #0b1011;
 	color: white;
 	border: none;
 	position: relative;
